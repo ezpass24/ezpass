@@ -1,5 +1,5 @@
 ## EZPass
-A website dedicated to storing your password in a safe and secure place.
+A website dedicated to storing your password in a safe and secure place. Created by the EZPass24 Team.
 
 ## Completed Issues
 See [Milestone 1](https://github.com/orgs/ezpass24/projects/1).
