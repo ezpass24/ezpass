@@ -53,6 +53,11 @@ const NavBar = () => {
                   Sign
                   out
                 </NavDropdown.Item>
+                <NavDropdown.Item id="navbar-profile" as={NavLink} to="/profile">
+                  <BoxArrowRight />
+                  {' '}
+                  My Profile
+                </NavDropdown.Item>
               </NavDropdown>
             )}
           </Nav>
