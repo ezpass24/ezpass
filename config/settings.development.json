@@ -11,6 +11,5 @@
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
   ],
   "defaultPasswords": [
-    { "name": "Basket", "quantity": 3, "owner": "john@foo.com", "condition": "excellent" }
   ]
 }
