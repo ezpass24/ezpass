@@ -7,7 +7,7 @@ const Landing = () => (
     {/* Header */}
     <Row className="align-middle text-center mb-4">
       <Col>
-        <h1 className="header-title">EZPass24</h1>
+        <h1 className="header-title" id="header">EZPass24</h1>
         <p className="header-subtitle">Securely manage your passwords in one place.</p>
       </Col>
     </Row>
@@ -80,7 +80,8 @@ const Landing = () => (
     {/* Footer */}
     <Row className="align-middle text-center">
       <Col>
-        <p className="footer-text">© 2024 EZPass24. All rights reserved. | <a className="footer-link">Privacy Policy</a> | <a className="footer-link">Terms of Service</a></p>
+        <p className="footer-text">© 2024 EZPass24. All rights reserved. </p>
+        {/*| <a href="#" className="footer-link">Privacy Policy</a> | <a href="#" className="footer-link">Terms of Service</a>*/}
       </Col>
     </Row>
   </Container>
