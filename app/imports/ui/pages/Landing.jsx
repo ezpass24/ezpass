@@ -80,7 +80,7 @@ const Landing = () => (
     {/* Footer */}
     <Row className="align-middle text-center">
       <Col>
-        <p className="footer-text">© 2024 EZPass24. All rights reserved. | <a href="#" className="footer-link">Privacy Policy</a> | <a href="#" className="footer-link">Terms of Service</a></p>
+        <p className="footer-text">© 2024 EZPass24. All rights reserved. | <a className="footer-link">Privacy Policy</a> | <a className="footer-link">Terms of Service</a></p>
       </Col>
     </Row>
   </Container>
