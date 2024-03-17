@@ -1,48 +1,36 @@
 import React from 'react';
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Meteor } from 'meteor/meteor';
+import { Col, Container, Row } from 'react-bootstrap';
+import { useTracker } from 'meteor/react-meteor-data';
+import LoadingSpinner from '../components/LoadingSpinner';
+import { Profiles } from '../../api/profiles/Profile';
 
 /* A simple static component to render some text for the landing page. */
-const MyProfile = () => (
-  <Container className="mb-4">
-    <Row className="mt-4">
-      <Col lg={4}>
-        <Card className="mb-4 rounded border border-dark card_profile antw">
-          <Card.Body className="text-center">
-            <div className="d-flex justify-content-center mb-4">
-              <img
-                src=""
-                alt="avatar"
-                className="rounded-circle border border-dark"
-                style={{ width: '150px', height: '150px' }}
-              />
-            </div>
-            <h3 className="mb-1 mt-3">1</h3>
-            <p className="text-muted mb-4">1</p>
-          </Card.Body>
-        </Card>
-        <Card className="mb-4 mt-4 border border-dark antw">
-          <Card.Body>
-            <Row className="mb-2">
-              <Col sm="3">
-                <Card.Text>Name</Card.Text>
-              </Col>
-              <Col sm="9">
-                <Card.Text className="text-muted">1</Card.Text>
-              </Col>
-            </Row>
-            <Row>
-              <Col sm="3">
-                <Card.Text>E-mail</Card.Text>
-              </Col>
-              <Col sm="9">
-                <Card.Text className="text-muted">1</Card.Text>
-              </Col>
-            </Row>
-          </Card.Body>
-        </Card>
-      </Col>
-    </Row>
-  </Container>
-);
+const MyProfile = () => {
+  // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
+  const { ready, profiles } = useTracker(() => {
+    // Note that this subscription will get cleaned up
+    // when your component is unmounted or deps change.
+    // Get access to Stuff documents.
+    const subscription = Meteor.subscribe(Profiles.userPublicationName);
+    // Determine if the subscription is ready
+    const rdy = subscription.ready();
+    // Get the Stuff documents
+    const profileItems = Profiles.collection.find({}).fetch();
+    return {
+      profles: profileItems,
+      ready: rdy,
+    };
+  }, []);
+  return (ready ? (
+    <Container className="py-3">
+      <Row className="justify-content-center">
+        <Col md={7}>
+          
+        </Col>
+      </Row>
+    </Container>
+  ) : <LoadingSpinner />);
+};
 
 export default MyProfile;
