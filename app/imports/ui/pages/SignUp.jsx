@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link, Navigate } from 'react-router-dom';
+import swal from 'sweetalert';
 import { Accounts } from 'meteor/accounts-base';
 import { Alert, Card, Col, Container, Row } from 'react-bootstrap';
 import SimpleSchema from 'simpl-schema';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { AutoForm, ErrorsField, SubmitField, TextField } from 'uniforms-bootstrap5';
+import { Profiles } from '../../api/profiles/Profile';
 
 /**
  * SignUp component is similar to signin component, but we create a new user instead.
@@ -23,6 +25,7 @@ const SignUp = ({ location }) => {
   /* Handle SignUp submission. Create user account and a profile entry, then redirect to the home page. */
   const submit = (doc) => {
     const { email, password } = doc;
+    const owner = email;
     Accounts.createUser({ email, username: email, password }, (err) => {
       if (err) {
         setError(err.reason);
@@ -31,6 +34,15 @@ const SignUp = ({ location }) => {
         setRedirectToRef(true);
       }
     });
+    Profiles.collection.insert(
+      { email, password, owner },
+      // eslint-disable-next-line no-shadow
+      (error) => {
+        if (error) {
+          swal('Error', error.message, 'error');
+        }
+      },
+    );
   };
 
   /* Display the signup form. Redirect to add page after successful registration and login. */
