@@ -18,15 +18,16 @@ const MyProfile = () => {
     // Get the Stuff documents
     const profileItems = Profiles.collection.find({}).fetch();
     return {
-      profles: profileItems,
+      profiles: profileItems,
       ready: rdy,
     };
   }, []);
+  const userProfile = profiles.find(profile => profile.owner === Meteor.user().username);
   return (ready ? (
     <Container className="py-3">
       <Row className="justify-content-center">
         <Col md={7}>
-          
+          <p>{userProfile.email}</p>
         </Col>
       </Row>
     </Container>
