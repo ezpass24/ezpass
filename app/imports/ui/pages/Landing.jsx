@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
-import './Landing.css'; // Assuming you have a CSS file named Landing.css
+// import './Landing.css'; // Assuming you have a CSS file named Landing.css
 
 const Landing = () => (
   <Container id="landing-page" fluid className="py-3">

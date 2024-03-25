@@ -18,6 +18,7 @@ import NavBar from '../components/NavBar';
 import SignIn from '../pages/SignIn';
 import NotAuthorized from '../pages/NotAuthorized';
 import LoadingSpinner from '../components/LoadingSpinner';
+import AddPassword from "../pages/AddPassword";
 // import ListPassword from '../pages/ListPassword';
 // import AddPassword from '../pages/AddPassword';
 // import EditPassword from '../pages/EditPassword';
@@ -47,7 +48,7 @@ const App = () => {
           <Route path="/edit/:_id" element={<ProtectedRoute><EditStuff /></ProtectedRoute>} />
           <Route path="/admin" element={<AdminProtectedRoute ready={ready}><ListStuffAdmin /></AdminProtectedRoute>} />
           {/* <Route path="/listPassword" element={<ProtectedRoute><ListPassword /></ProtectedRoute>} /> */}
-          {/* <Route path="/addPassword" element={<ProtectedRoute><AddPassword /></ProtectedRoute>} /> */}
+          <Route path="/addPassword" element={<ProtectedRoute><AddPassword /></ProtectedRoute>} />
           {/* <Route path="/editPassword/:_id" element={<ProtectedRoute><EditPassword /></ProtectedRoute>} /> */}
           {/* <Route path="/adminPassword" element={<AdminProtectedRoute ready={ready}><ListPasswordAdmin /></AdminProtectedRoute>} /> */}
           <Route path="/notauthorized" element={<NotAuthorized />} />
