@@ -11,7 +11,7 @@ import { Passwords } from '../../api/password/Password';
 const formSchema = new SimpleSchema({
   name: String,
   password: String,
-  lastModified: Date,
+  lastModified: String,
 });
 
 const bridge = new SimpleSchema2Bridge(formSchema);
@@ -20,8 +20,8 @@ const bridge = new SimpleSchema2Bridge(formSchema);
 const AddPassword = () => {
 
   const today = new Date();
-  today.setHours(today.getHours() - 10); // UTC to HST
-  today.getDate();
+  // today.setHours(today.getHours()); // UTC to HST
+  // const today = date.getDate().toString().substring(4, 32);
 
   // On submit, insert the data.
   const submit = (data, formRef) => {
@@ -52,7 +52,7 @@ const AddPassword = () => {
               <Card.Body>
                 <TextField name="name" />
                 <TextField name="password" />
-                <DateField name="lastModified" value={today} disabled />
+                <TextField name="lastModified" value={today.toString().substring(4, 24)} disabled />
                 <SubmitField value="Submit" />
                 <ErrorsField />
               </Card.Body>

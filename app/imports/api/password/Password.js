@@ -15,7 +15,7 @@ class PasswordsCollection {
       name: String,
       password: String,
       owner: String,
-      lastModified: Date,
+      lastModified: String,
     });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
     this.collection.attachSchema(this.schema);

@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 const PasswordItem = ({ password }) => (
   <tr>
     <td>{password.name}</td>
-    <td>{password.quantity}</td>
-    <td>{password.condition}</td>
+    <td>{password.password}</td>
+    <td>{password.lastModified}</td>
     <td>
       <Link to={`/edit/${password._id}`}>Edit</Link>
     </td>
@@ -18,8 +18,8 @@ const PasswordItem = ({ password }) => (
 PasswordItem.propTypes = {
   password: PropTypes.shape({
     name: PropTypes.string,
-    quantity: PropTypes.number,
-    condition: PropTypes.string,
+    password: PropTypes.string,
+    lastModified: PropTypes.string,
     _id: PropTypes.string,
   }).isRequired,
 };
