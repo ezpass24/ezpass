@@ -40,7 +40,7 @@ const Landing = () => (
         <ol className="section-list">
           <li>Sign Up</li>
           <li>Add Passwords</li>
-          <li>Access Anytime</li>
+          <li>Access Anytime & Anywhere</li>
         </ol>
       </Col>
     </Row>
@@ -53,27 +53,11 @@ const Landing = () => (
       </Col>
     </Row>
 
-    {/* Get Started Section */}
-    <Row className="align-middle text-center mb-4">
-      <Col>
-        <h2 className="section-title">Get Started</h2>
-        <Button variant="primary" className="btn-get-started">Sign Up Now</Button>
-      </Col>
-    </Row>
-
     {/* About Us Section */}
     <Row className="align-middle text-center mb-4">
       <Col>
         <h2 className="section-title">About Us</h2>
         <p className="section-text">EZPass is brought to you by Richard Baltazar, Christopher Pascal, Brayden Danielson, and Kanai Gooding.</p>
-      </Col>
-    </Row>
-
-    {/* Contact Us Section */}
-    <Row className="align-middle text-center mb-4">
-      <Col>
-        <h2 className="section-title">Contact Us</h2>
-        <Button variant="secondary" className="btn-contact-us">Contact Us</Button>
       </Col>
     </Row>
 
