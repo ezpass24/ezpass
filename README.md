@@ -25,6 +25,32 @@ See [Milestone 2](https://github.com/orgs/ezpass24/projects/2).
 | Kanai Gooding | Landing Page | Fix Styling |
 | Richard Baltazar | Fixed profiles | Admin edit page |
 
-## Pending Issues
+## Milestone 3 (3/28/24)
 
-See [Milestone 3](https://github.com/orgs/ezpass24/projects/4).
+Progress: In this milestone, we aimed to have a relatively solid, working program with all vital components completed. We added security questions, created pages for listing and editing passwords, developed a page for database edits by admins, fixed landing page styling, and added TestCafe for testing.
+
+Link: [Milestone 3](https://github.com/orgs/ezpass24/projects/4)
+
+Pending: The main tasks left are to finalize the forget password page, list passwords page, fix styling, and complete the admin edit page. We will also conduct a midterm project evaluation to review the achievability of our project goals and revise the concept if necessary.
+
+Roles and responsibilities:
+
+- **Brayden Danielson**
+  - New completions: None
+  - Current: Working on the Forget Password Page
+  - Next: Finalizing the Accounts Database
+
+- **Christopher Pascual**
+  - New completions: Created TestCafes, Added Security Questions, Created Page for Listing Passwords, Added Ability to Edit Passwords
+  - Current: Fixing Conflicts in Database
+  - Next: Finalizing the List Passwords Page
+
+- **Kanai Gooding**
+  - New completions: None
+  - Current: Fixing Styling on Landing Page
+  - Next: Completing the Landing Page
+
+- **Richard Baltazar**
+  - New completions: Created a Page for Database Edits by Admins
+  - Current: Working on Admin Edit Page
+  - Next: Finalizing the Profile Page
