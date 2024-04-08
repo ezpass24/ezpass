@@ -6,7 +6,7 @@ import { IoLockClosedSharp } from 'react-icons/io5';
 import { PiPasswordBold } from 'react-icons/pi';
 import { MdOutlineAssignment } from 'react-icons/md';
 import { FaRegFolderOpen } from 'react-icons/fa6';
-import {NavLink} from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 const Landing = () => (
   <Container id="landing-page" fluid className="py-3">
