@@ -1,62 +1,71 @@
 import React from 'react';
-import { Button, Col, Container, Row } from 'react-bootstrap';
-// import './Landing.css'; // Assuming you have a CSS file named Landing.css
+import { Button, Col, Container, Image, Row } from 'react-bootstrap';
+import { FcCheckmark } from 'react-icons/fc';
+import { FaTools } from 'react-icons/fa';
+import { IoLockClosedSharp } from 'react-icons/io5';
+import { PiPasswordBold } from 'react-icons/pi';
+import { MdOutlineAssignment } from 'react-icons/md';
+import { FaRegFolderOpen } from 'react-icons/fa6';
 
 const Landing = () => (
   <Container id="landing-page" fluid className="py-3">
     {/* Header */}
     <Row className="align-middle text-center mb-4">
       <Col>
-        <h1 className="header-title" id="header">EZPass24</h1>
-        <p className="header-subtitle">Securely manage your passwords in one place.</p>
+        <Image rounded src="/images/ezlogo.png" width="500px" alt="logo" />
       </Col>
     </Row>
 
     {/* Welcome Section */}
-    <Row className="align-middle text-center mb-4">
+    <Row className="align-middle text-center mb-4 p-5">
       <Col>
-        <h2 className="section-title">Welcome to EZPass!</h2>
-        <p className="section-text">EZPass simplifies your digital life by providing a centralized environment to store and manage your passwords for various platforms.</p>
+        <h1 className="section-title">Welcome to EZPass!</h1>
+        <Row>
+          <Col />
+          <Col sm={3}>
+            <p className="section-text">EZPass simplifies your digital life by providing a centralized environment
+              to store and manage your passwords for various platforms.
+            </p>
+          </Col>
+          <Col />
+        </Row>
       </Col>
     </Row>
 
-    {/* Why Choose EZPass Section */}
+    {/* Why, How, Security & Privacy Sections */}
     <Row className="align-middle text-center mb-4">
       <Col>
-        <h2 className="section-title">Why Choose EZPass?</h2>
-        <ul className="section-list">
-          <li>Centralized Password Management</li>
-          <li>Enhanced Security</li>
-          <li>User-Friendly Interface</li>
-          <li>Peace of Mind</li>
-        </ul>
+        <h2>Why Choose EZPass?</h2>
+        <h7>Centralized Password Management <FcCheckmark size={30} />
+          <br />
+          Enhanced Security <FcCheckmark size={30} />
+          <br />
+          User-Friendly Interface <FcCheckmark size={30} />
+          <br />
+          Peace of Mind <FcCheckmark size={30} />
+        </h7>
       </Col>
-    </Row>
-
-    {/* How It Works Section */}
-    <Row className="align-middle text-center mb-4">
       <Col>
-        <h2 className="section-title">How It Works</h2>
-        <ol className="section-list">
-          <li>Sign Up</li>
-          <li>Add Passwords</li>
-          <li>Access Anytime</li>
-        </ol>
+        <h2><FaTools /> How It Works <FaTools /></h2>
+        <p>
+          Sign Up <MdOutlineAssignment size={30} />
+          <br />
+          Add Passwords <PiPasswordBold size={30} />
+          <br />
+          Access Anytime <FaRegFolderOpen size={30} />
+        </p>
       </Col>
-    </Row>
-
-    {/* Security & Privacy Section */}
-    <Row className="align-middle text-center mb-4">
       <Col>
-        <h2 className="section-title">Security & Privacy</h2>
-        <p className="section-text">At EZPass, your security is our top priority. We employ industry-standard security measures to protect your data.</p>
+        <h2 className><IoLockClosedSharp /> Security & Privacy <IoLockClosedSharp /></h2>
+        <Row><Col /><Col sm={6}>At EZPass, your security is our top priority. We employ industry-standard security measures to protect your data.</Col><Col /></Row>
       </Col>
     </Row>
 
     {/* Get Started Section */}
-    <Row className="align-middle text-center mb-4">
+    <Row className="align-middle text-center mb-4 p-5">
       <Col>
-        <h2 className="section-title">Get Started</h2>
+        <h2>Get Started</h2>
+        <h5>Sign up free today!</h5>
         <Button variant="primary" className="btn-get-started">Sign Up Now</Button>
       </Col>
     </Row>
@@ -64,26 +73,19 @@ const Landing = () => (
     {/* About Us Section */}
     <Row className="align-middle text-center mb-4">
       <Col>
-        <h2 className="section-title">About Us</h2>
-        <p className="section-text">EZPass is brought to you by Richard Baltazar, Christopher Pascal, Brayden Danielson, and Kanai Gooding.</p>
+        <h3 className="section-title">About Us</h3>
+        <Row>
+          <Col />
+          <Col sm={2}>
+            <small>
+              EZPass is brought to you by Richard Baltazar, Christopher Pascal, Brayden Danielson, and Kanai Gooding.
+            </small>
+          </Col>
+          <Col />
+        </Row>
       </Col>
     </Row>
 
-    {/* Contact Us Section */}
-    <Row className="align-middle text-center mb-4">
-      <Col>
-        <h2 className="section-title">Contact Us</h2>
-        <Button variant="secondary" className="btn-contact-us">Contact Us</Button>
-      </Col>
-    </Row>
-
-    {/* Footer */}
-    <Row className="align-middle text-center">
-      <Col>
-        <p className="footer-text">© 2024 EZPass24. All rights reserved. </p>
-        {/* | <a href="#" className="footer-link">Privacy Policy</a> | <a href="#" className="footer-link">Terms of Service</a> */}
-      </Col>
-    </Row>
   </Container>
 );
 
