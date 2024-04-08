@@ -6,6 +6,7 @@ import { IoLockClosedSharp } from 'react-icons/io5';
 import { PiPasswordBold } from 'react-icons/pi';
 import { MdOutlineAssignment } from 'react-icons/md';
 import { FaRegFolderOpen } from 'react-icons/fa6';
+import {NavLink} from "react-router-dom";
 
 const Landing = () => (
   <Container id="landing-page" fluid className="py-3">
@@ -66,7 +67,7 @@ const Landing = () => (
       <Col>
         <h2>Get Started</h2>
         <h5>Sign up free today!</h5>
-        <Button variant="primary" className="btn-get-started">Sign Up Now</Button>
+        <Button variant="primary" className="btn-get-started" as={NavLink} to="/signup">Sign Up Now</Button>
       </Col>
     </Row>
 
