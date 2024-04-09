@@ -18,13 +18,14 @@ const SignUp = ({ location }) => {
 
   const schema = new SimpleSchema({
     email: String,
+    securityQuestion: String,
     password: String,
   });
   const bridge = new SimpleSchema2Bridge(schema);
 
   /* Handle SignUp submission. Create user account and a profile entry, then redirect to the home page. */
   const submit = (doc) => {
-    const { email, password } = doc;
+    const { email, password, securityQuestion } = doc;
     const owner = email;
     Accounts.createUser({ email, username: email, password }, (err) => {
       if (err) {
@@ -35,7 +36,7 @@ const SignUp = ({ location }) => {
       }
     });
     Profiles.collection.insert(
-      { email, password, owner },
+      { email, password, owner, securityQuestion },
       // eslint-disable-next-line no-shadow
       (error) => {
         if (error) {
@@ -63,6 +64,7 @@ const SignUp = ({ location }) => {
               <Card.Body>
                 <TextField name="email" placeholder="E-mail address" />
                 <TextField name="password" placeholder="Password" type="password" />
+                <TextField name="securityQuestion" placeholder="securityQuestion" />
                 <ErrorsField />
                 <SubmitField />
               </Card.Body>

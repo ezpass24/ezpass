@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row, Card } from 'react-bootstrap';
 import { useTracker } from 'meteor/react-meteor-data';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { Profiles } from '../../api/profiles/Profile';
@@ -25,9 +25,26 @@ const MyProfile = () => {
   const userProfile = profiles.find(profile => profile.owner === Meteor.user().username);
   return (ready ? (
     <Container className="py-3">
-      <Row className="justify-content-center">
-        <Col md={7}>
+      <Row className="d-flex justify-content-center align-items-center">
+        <Col md={7} className="d-flex justify-content-center align-items-center" >
+          <Card style={{ width: '18rem' }}>
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+              <Card.Text>
+                Some quick example text to build on the card title and make up the
+                {/* eslint-disable-next-line react/no-unescaped-entities */}
+                bulk of the card's content.
+              </Card.Text>
+              <Card.Link href="#">Card Link</Card.Link>
+              <Card.Link href="#">Another Link</Card.Link>
+            </Card.Body>
+          </Card>
           <p>{userProfile.email}</p>
+          <p>{userProfile.securityQuestion}</p>
+        </Col>
+        <Col md={5} className="text-center">
+          <p>{userProfile.password}</p>
         </Col>
       </Row>
     </Container>
