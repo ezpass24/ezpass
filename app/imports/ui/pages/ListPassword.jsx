@@ -6,7 +6,7 @@ import { Passwords } from '../../api/password/Password';
 import PasswordItem from '../components/PasswordItem';
 import LoadingSpinner from '../components/LoadingSpinner';
 
-/* Renders a table containing all of the Password documents. Use <PasswordItem> to render each row. */
+/* Renders a table containing all the Password documents. Use <PasswordItem> to render each row. */
 const ListPassword = () => {
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { ready, passwords } = useTracker(() => {
@@ -26,7 +26,7 @@ const ListPassword = () => {
   return (ready ? (
     <Container className="py-3">
       <Row className="justify-content-center">
-        <Col md={7}>
+        <Col md={5}>
           <Col className="text-center">
             <h2>List Password</h2>
           </Col>
@@ -34,8 +34,8 @@ const ListPassword = () => {
             <thead>
               <tr>
                 <th>Name</th>
-                <th>Quantity</th>
-                <th>Condition</th>
+                <th>Password</th>
+                <th>Last Modified</th>
                 <th>Edit</th>
               </tr>
             </thead>
