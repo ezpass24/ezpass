@@ -37,14 +37,14 @@ const Landing = () => (
     <Row className="align-middle text-center mb-4">
       <Col>
         <h2>Why Choose EZPass?</h2>
-        <h7>Centralized Password Management <FcCheckmark size={30} />
+        <p>Centralized Password Management <FcCheckmark size={30} />
           <br />
           Enhanced Security <FcCheckmark size={30} />
           <br />
           User-Friendly Interface <FcCheckmark size={30} />
           <br />
           Peace of Mind <FcCheckmark size={30} />
-        </h7>
+        </p>
       </Col>
       <Col>
         <h2><FaTools /> How It Works <FaTools /></h2>
@@ -57,7 +57,7 @@ const Landing = () => (
         </p>
       </Col>
       <Col>
-        <h2 className><IoLockClosedSharp /> Security & Privacy <IoLockClosedSharp /></h2>
+        <h2><IoLockClosedSharp /> Security & Privacy <IoLockClosedSharp /></h2>
         <Row><Col /><Col sm={6}>At EZPass, your security is our top priority. We employ industry-standard security measures to protect your data.</Col><Col /></Row>
       </Col>
     </Row>
@@ -79,7 +79,7 @@ const Landing = () => (
           <Col />
           <Col sm={2}>
             <small>
-              EZPass is brought to you by Richard Baltazar, Christopher Pascal, Brayden Danielson, and Kanai Gooding.
+              EZPass is brought to you by Richard Baltazar, Christopher Pascual, Brayden Danielson, and Kanai Gooding.
             </small>
           </Col>
           <Col />
