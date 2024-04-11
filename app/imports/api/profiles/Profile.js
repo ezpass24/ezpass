@@ -2,7 +2,8 @@ import { Mongo } from 'meteor/mongo';
 import SimpleSchema from 'simpl-schema';
 
 // Define the default profile picture URL or path as a constant
-const defaultProfilePicture = 'https://static.vecteezy.com/system/resources/previews/020/765/399/non_2x/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg';
+// Commented to fix merge issue
+// const defaultProfilePicture = 'https://static.vecteezy.com/system/resources/previews/020/765/399/non_2x/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg';
 
 class ProfileCollection {
   constructor() {

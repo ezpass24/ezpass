@@ -26,11 +26,11 @@ const MyProfile = () => {
   return (ready ? (
     <Container className="py-3">
       <Row className="d-flex justify-content-center align-items-center">
-        <Col md={7} className="d-flex justify-content-center align-items-center" >
+        <Col md={7} className="d-flex justify-content-center align-items-center">
           <Card style={{ width: '18rem' }}>
             <Card.Body>
               <Card.Title><p>{userProfile.email}</p></Card.Title>
-              <Card.Subtitle className="mb-2 text-muted"></Card.Subtitle>
+              <Card.Subtitle className="mb-2 text-muted" />
             </Card.Body>
           </Card>
         </Col>
