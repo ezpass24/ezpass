@@ -24,7 +24,7 @@ const ListPassword = () => {
     };
   }, []);
   return (ready ? (
-    <Container className="py-3">
+    <Container className="py-3" id="list-passwords-page">
       <Row className="justify-content-center">
         <Col md={5}>
           <Col className="text-center">
