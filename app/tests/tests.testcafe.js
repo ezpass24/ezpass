@@ -3,7 +3,7 @@ import { signinPage } from './signin.page';
 import { signoutPage } from './signout.page';
 import { navBar } from './navbar.component';
 import { listPasswordsPage } from './listpasswords.page';
-import { addPasswordsPage } from "./addpasswords.page";
+import { addPasswordsPage } from './addpasswords.page';
 
 /* global fixture:false, test:false */
 
