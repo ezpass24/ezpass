@@ -1,7 +1,7 @@
 import React from 'react';
 import swal from 'sweetalert';
 import { Card, Col, Container, Row } from 'react-bootstrap';
-import { AutoForm, ErrorsField, HiddenField, NumField, SelectField, SubmitField, TextField } from 'uniforms-bootstrap5';
+import { AutoForm, ErrorsField, HiddenField, SubmitField, TextField } from 'uniforms-bootstrap5';
 import { Meteor } from 'meteor/meteor';
 import { useTracker } from 'meteor/react-meteor-data';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
@@ -13,6 +13,9 @@ const bridge = new SimpleSchema2Bridge(Passwords.schema);
 
 /* Renders the EditPassword page for editing a single document. */
 const EditPassword = () => {
+
+  const today = new Date();
+
   // Get the documentID from the URL field. See imports/ui/layouts/App.jsx for the route containing :_id.
   const { _id } = useParams();
   // console.log('EditPassword', _id);
@@ -32,8 +35,8 @@ const EditPassword = () => {
   // console.log('EditPassword', doc, ready);
   // On successful submit, insert the data.
   const submit = (data) => {
-    const { name, quantity, condition } = data;
-    Passwords.collection.update(_id, { $set: { name, quantity, condition } }, (error) => (error ?
+    const { name, password, lastModified } = data;
+    Passwords.collection.update(_id, { $set: { name, password, lastModified } }, (error) => (error ?
       swal('Error', error.message, 'error') :
       swal('Success', 'Item updated successfully', 'success')));
   };
@@ -46,10 +49,10 @@ const EditPassword = () => {
           <AutoForm schema={bridge} onSubmit={data => submit(data)} model={doc}>
             <Card>
               <Card.Body>
-                <TextField name="name" />
-                <NumField name="quantity" decimal={null} />
-                <SelectField name="condition" />
-                <SubmitField value="Submit" />
+                <TextField name="name" id="edit-pass-name" />
+                <TextField name="password" id="edit-pass-pass" />
+                <TextField name="lastModified" value={today.toString().substring(4, 24)} disabled />
+                <SubmitField value="Submit" id="edit-pass-submit" />
                 <ErrorsField />
                 <HiddenField name="owner" />
               </Card.Body>

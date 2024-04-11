@@ -9,7 +9,7 @@ const PasswordItem = ({ password }) => (
     <td>{password.password}</td>
     <td>{password.lastModified}</td>
     <td>
-      <Link to={`/edit/${password._id}`}>Edit</Link>
+      <Link to={`/editPassword/${password._id}`}>Edit</Link>
     </td>
   </tr>
 );

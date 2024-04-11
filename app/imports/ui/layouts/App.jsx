@@ -20,7 +20,7 @@ import NotAuthorized from '../pages/NotAuthorized';
 import LoadingSpinner from '../components/LoadingSpinner';
 import AddPassword from '../pages/AddPassword';
 import ListPassword from '../pages/ListPassword';
-// import EditPassword from '../pages/EditPassword';
+import EditPassword from '../pages/EditPassword';
 // import ListPasswordAdmin from '../pages/ListPasswordAdmin';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
@@ -48,6 +48,7 @@ const App = () => {
           <Route path="/admin" element={<AdminProtectedRoute ready={ready}><ListStuffAdmin /></AdminProtectedRoute>} />
           <Route path="/listPassword" element={<ProtectedRoute><ListPassword /></ProtectedRoute>} />
           <Route path="/addPassword" element={<ProtectedRoute><AddPassword /></ProtectedRoute>} />
+          <Route path="/editPassword/:_id" element={<ProtectedRoute><EditPassword /></ProtectedRoute>} />
           {/* <Route path="/editPassword/:_id" element={<ProtectedRoute><EditPassword /></ProtectedRoute>} /> */}
           {/* <Route path="/adminPassword" element={<AdminProtectedRoute ready={ready}><ListPasswordAdmin /></AdminProtectedRoute>} /> */}
           <Route path="/notauthorized" element={<NotAuthorized />} />
