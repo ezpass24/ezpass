@@ -43,17 +43,17 @@ const AddPassword = () => {
   // Render the form. Use Uniforms: https://github.com/vazco/uniforms
   let fRef = null;
   return (
-    <Container className="py-3">
+    <Container className="py-3" id="add-pass-page">
       <Row className="justify-content-center">
         <Col xs={5}>
           <Col className="text-center"><h2>Add Password</h2></Col>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => submit(data, fRef)}>
             <Card>
               <Card.Body>
-                <TextField name="name" />
-                <TextField name="password" />
+                <TextField name="name" id="add-pass-name" />
+                <TextField name="password" id="add-pass-pass" />
                 <TextField name="lastModified" value={today.toString().substring(4, 24)} disabled />
-                <SubmitField value="Submit" />
+                <SubmitField value="Submit" id="add-pass-submit" />
                 <ErrorsField />
               </Card.Body>
             </Card>
