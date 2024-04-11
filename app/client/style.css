@@ -1,10 +1,11 @@
 /* Use Open Sans as the default sans serif font. */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Source+Code+Pro:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,700");
 
 /* Set up some CSS variables to theme the application. */
 :root {
-  --matr-navbar-bg: #ECECEC;
-  --matr-navbar-bg-rgb: 236, 236, 236;
+  --matr-navbar-bg: #808080;
+  --matr-navbar-bg-rgb: 211, 211, 211;
 }
 
 /* Change bootstrap variable values.
@@ -14,10 +15,10 @@ body {
   --bs-light-rgb: var(--matr-navbar-bg-rgb);
 }
 
-/* Set the alert background on the signin and signup pages. */
-#signin-page .alert-light, #signup-page .alert-light {
-  --bs-alert-bg: var(--matr-navbar-bg);
-}
+/*!* Set the alert background on the signin and signup pages. *!*/
+/*#signin-page .alert-light, #signup-page .alert-light {*/
+/*  --bs-alert-bg: var(--matr-navbar-bg);*/
+/*}*/
 
 /* Define custom styles */
 .gray-background {
@@ -25,4 +26,14 @@ body {
   color: var(--bs-dark);
   padding-top: 10px;
   padding-bottom: 20px;
+}
+
+#landing-page {
+  /*background-image: url("app/public/images/background.webp");*/
+  background: #EEEEEE;
+  font-family: 'Poppins' !important;
+}
+
+.navbar {
+  font-family: 'Poppins' !important;
 }
