@@ -12,6 +12,6 @@
   ],
   "defaultPasswords": [
     { "name": "Netflix", "password": "password", "owner": "john@foo.com", "lastModified": "12/31/2999" },
-    { "name": "Youtube", "quantity": "12345678", "owner": "john@foo.com", "lastModified": "1/1/2000" }
+    { "name": "Youtube", "password": "12345678", "owner": "john@foo.com", "lastModified": "1/1/2000" }
   ]
 }
