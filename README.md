@@ -25,7 +25,7 @@ See [Milestone 2](https://github.com/orgs/ezpass24/projects/2).
 | Kanai Gooding | Landing Page | Fix Styling |
 | Richard Baltazar | Fixed profiles | Admin edit page |
 
-## Milestone 3 (3/28/24)
+## Milestone 3 (4/11/24)
 
 Progress: In this milestone, we aimed to have a relatively solid, working program with all vital components completed. We added security questions, created pages for listing and editing passwords, developed a page for database edits by admins, fixed landing page styling, and added TestCafe for testing.
 
