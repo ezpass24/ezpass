@@ -13,5 +13,9 @@
   "defaultPasswords": [
     { "name": "Netflix", "password": "password", "owner": "john@foo.com", "lastModified": "12/31/2999" },
     { "name": "Youtube", "password": "12345678", "owner": "john@foo.com", "lastModified": "1/1/2000" }
+  ],
+  "defaultProfiles": [
+    { "email": "john@foo.com", "image": "https://static.vecteezy.com/system/resources/previews/020/765/399/non_2x/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg", "owner": "john@foo.com"},
+    { "email": "admin@foo.com", "image": "https://static.vecteezy.com/system/resources/previews/020/765/399/non_2x/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg", "owner": "admin@foo.com" }
   ]
 }
