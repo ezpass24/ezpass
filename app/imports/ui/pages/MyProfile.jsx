@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Col, Container, Row, Card, Table } from 'react-bootstrap';
+import {Col, Container, Row, Card, Table, Image} from 'react-bootstrap';
 import { useTracker } from 'meteor/react-meteor-data';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { Profiles } from '../../api/profiles/Profile';
@@ -13,12 +13,12 @@ const MyProfile = () => {
   const { ready, profiles, passwords } = useTracker(() => {
     // Note that this subscription will get cleaned up
     // when your component is unmounted or deps change.
-    // Get access to Stuff documents.
+    // Get access to documents.
     const subscription = Meteor.subscribe(Profiles.userPublicationName);
     const subscription2 = Meteor.subscribe(Passwords.userPublicationName);
     // Determine if the subscription is ready
     const rdy = subscription.ready() && subscription2.ready();
-    // Get the Stuff documents
+    // Get the documents
     const profileItems = Profiles.collection.find({}).fetch();
     const passwordItems = Passwords.collection.find({}).fetch();
     return {
@@ -33,8 +33,9 @@ const MyProfile = () => {
       <Row className="d-flex justify-content-center align-items-center">
         <Col md={4} className="d-flex justify-content-center align-items-center">
           <Card style={{ width: '18rem' }}>
-            <Card.Body>
+            <Card.Body className="text-center">
               <Card.Title><p>{userProfile.email}</p></Card.Title>
+              <Image src="https://static.vecteezy.com/system/resources/previews/020/765/399/non_2x/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg" width="175px" />
               <Card.Subtitle className="mb-2 text-muted" />
             </Card.Body>
           </Card>
