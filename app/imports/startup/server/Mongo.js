@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Stuffs } from '../../api/stuff/Stuff.js';
 import { Passwords } from '../../api/password/Password.js';
+import {Profiles} from "../../api/profiles/Profile";
 
 /* eslint-disable no-console */
 
@@ -13,6 +14,10 @@ const addData = (data) => {
 const addPasswordData = (data) => {
   console.log(`  Adding: ${data.name} (${data.owner})`);
   Passwords.collection.insert(data);
+};
+
+const addProfileData = (data) => {
+  Profiles.collection.insert(data);
 };
 
 // Initialize the StuffsCollection if empty.
@@ -28,5 +33,12 @@ if (Passwords.collection.find().count() === 0) {
   if (Meteor.settings.defaultPasswords) {
     console.log('Creating default data.');
     Meteor.settings.defaultPasswords.forEach(data => addPasswordData(data));
+  }
+}
+
+if (Profiles.collection.find().count() === 0) {
+  if (Meteor.settings.defaultProfiles) {
+    console.log('Creating default data.');
+    Meteor.settings.defaultProfiles.forEach(data => addProfileData(data));
   }
 }

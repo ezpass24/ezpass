@@ -35,7 +35,7 @@ const MyProfile = () => {
           <Card style={{ width: '18rem' }}>
             <Card.Body className="text-center">
               <Card.Title><p>{userProfile.email}</p></Card.Title>
-              <Image src="https://static.vecteezy.com/system/resources/previews/020/765/399/non_2x/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg" width="175px" />
+              <Image src={userProfile.image} width="175px" />
               <Card.Subtitle className="mb-2 text-muted" />
             </Card.Body>
           </Card>

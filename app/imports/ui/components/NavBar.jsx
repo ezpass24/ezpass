@@ -15,9 +15,15 @@ const NavBar = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand as={NavLink} to="/">
-          <Image rounded src="/images/ezlogo.png" width="200px" alt="logo" />
-        </Navbar.Brand>
+        {currentUser ? ([
+          <Navbar.Brand as={NavLink} to="/home">
+            <Image rounded src="/images/ezlogo.png" width="200px" alt="logo" />
+          </Navbar.Brand>,
+        ]) : (
+          <Navbar.Brand as={NavLink} to="/">
+            <Image rounded src="/images/ezlogo.png" width="200px" alt="logo" />
+          </Navbar.Brand>
+        ) }
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto justify-content-start">

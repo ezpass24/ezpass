@@ -18,14 +18,14 @@ const SignUp = ({ location }) => {
 
   const schema = new SimpleSchema({
     email: String,
-    securityQuestion: String,
+    image: String,
     password: String,
   });
   const bridge = new SimpleSchema2Bridge(schema);
 
   /* Handle SignUp submission. Create user account and a profile entry, then redirect to the home page. */
   const submit = (doc) => {
-    const { email, password, securityQuestion } = doc;
+    const { email, password, image } = doc;
     const owner = email;
     Accounts.createUser({ email, username: email, password }, (err) => {
       if (err) {
@@ -36,7 +36,7 @@ const SignUp = ({ location }) => {
       }
     });
     Profiles.collection.insert(
-      { email, password, owner, securityQuestion },
+      { email, image, owner },
       // eslint-disable-next-line no-shadow
       (error) => {
         if (error) {
@@ -47,7 +47,7 @@ const SignUp = ({ location }) => {
   };
 
   /* Display the signup form. Redirect to add page after successful registration and login. */
-  const { from } = location?.state || { from: { pathname: '/add' } };
+  const { from } = location?.state || { from: { pathname: '/home' } };
   // if correct authentication, redirect to from: page instead of signup screen
   if (redirectToReferer) {
     return <Navigate to={from} />;
@@ -64,7 +64,7 @@ const SignUp = ({ location }) => {
               <Card.Body>
                 <TextField name="email" placeholder="E-mail address" />
                 <TextField name="password" placeholder="Password" type="password" />
-                <TextField name="securityQuestion" placeholder="securityQuestion" />
+                <TextField name="image" placeholder="Insert Profile Image Link" />
                 <ErrorsField />
                 <SubmitField />
               </Card.Body>

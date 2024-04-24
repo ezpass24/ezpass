@@ -12,8 +12,7 @@ class ProfileCollection {
 
     this.schema = new SimpleSchema({
       email: String,
-      password: String,
-      securityQuestion: String,
+      image: String,
       owner: String,
     });
 
