@@ -54,3 +54,43 @@ Roles and responsibilities:
   - New completions: Created a Page for Database Edits by Admins
   - Current: Working on Admin Edit Page
   - Next: Finalizing the Profile Page
+
+## Milestone 4 (5/2/24)
+
+Roles and responsibilities:
+
+- **Brayden Danielson**
+  - New completions: Final fixes
+
+- **Christopher Pascual**
+  - New completions: Final fixes
+  - 
+- **Kanai Gooding**
+  - New completions: Final fixes
+  
+- **Richard Baltazar**
+  - New completions: Profile page
+ 
+## How to Run EZPass
+To run EZPass locally:
+1) Download the dependencies: [Node.js 14](https://nodejs.org/en/blog/release/v14.17.3) then [Meteor](https://docs.meteor.com/install.html)
+2) Download the [release](https://github.com/ezpass24/ezpass/releases/tag/Latest)
+3) Unzip the release
+4) Using a terminal of your choice, "cd" into the unzipped folder then "cd" into "app"
+5) Run the command "meteor npm run start"
+6) Once the program has finished initial setup, click on "http://localhost:3000/" to enter the app
+
+## Dev Notes
+Overall, working on EZPass was very fun for us. We are definitely proud at the fluidity of the program with how easy it is to sign up then start managing passwords. Our most difficult task was creating test cases. Test cases would work fine on our local machines but not on Github. This caused us to use tedious methods to solve it. We are a bit disappointed that we couldn't add more features in time (ex. login recovery).
+
+## Repository
+[Link to Repository](https://github.com/ezpass24)
+
+## Final Project Documentation
+[Link to Documentation](https://docs.google.com/document/d/1eUnT2pXMS1ENYaiNf9noUVyOtibBN5g8dPy19cXCIro/edit?usp=sharing)
+ 
+## Wiki
+The guide on how to use EZPass is on the [Wiki](https://github.com/ezpass24/ezpass/wiki)
+
+## Release
+[Link to Release](https://github.com/ezpass24/ezpass/releases/tag/Latest)
